@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -52,13 +55,15 @@ public class Test1 {
 //		Comparator<Computer> c = (c1, c2) -> c1.getAge().compareTo(c2.getAge());
 //		Comparator<Computer> c = Comparator.comparing(Computer::getAge);
 		
-		List<Employee> employees = new ArrayList<>();
-		employees.add(new Employee(10, "chris"));
-		employees.add(new Employee(15, "pam"));
-		employees.add(new Employee(17, "pam"));
-		employees.add(new Employee(25, "tim"));
-		employees.add(new Employee(24, "tim"));
-		employees.add(new Employee(17, "bob"));
+//		List<Employee> employees = new ArrayList<>();
+//		employees.add(new Employee(10, "chris"));
+//		employees.add(new Employee(15, "pam"));
+//		employees.add(new Employee(17, "pam"));
+//		employees.add(new Employee(25, "tim"));
+//		employees.add(new Employee(24, "tim"));
+//		employees.add(new Employee(17, "bob"));
+		
+		
 		
 //		System.out.println("Employee:" + employees);
 		
@@ -85,11 +90,69 @@ public class Test1 {
 //		.forEach(System.out::println);
 		
 		//Iterator, ArrayList List
-		Iterator<Employee> itEmployee = employees.iterator();
-		System.out.println(itEmployee.next());
-		System.out.println(itEmployee.next());
-		System.out.println(itEmployee.next());
+//		Iterator<Employee> itEmployee = employees.iterator();
+//		System.out.println(itEmployee.next());
+//		System.out.println(itEmployee.next());
+//		System.out.println(itEmployee.next());
 		
+		//HashSet
+//		HashSet<Employee> employees = new HashSet<>();
+//		employees.add(new Employee(10, "chris"));
+//		employees.add(new Employee(15, "pam"));
+//		employees.add(new Employee(17, "pam"));
+//		employees.add(new Employee(25, "tim"));
+//		employees.add(new Employee(24, "tim"));
+//		employees.add(new Employee(17, "bob"));
+//		
+//		Iterator<Employee> it = employees.iterator();
+//		while(it.hasNext()) {
+//			System.out.println(it.next());
+//		}
+		
+//		ArrayList<Integer> numbers1 = new ArrayList<Integer>();
+//		numbers1.add(100);
+//		numbers1.add(51);
+//		numbers1.add(17);
+//		numbers1.add(1);
+//		numbers1.add(90);
+//		
+//		Iterator<Integer> it = numbers1.iterator();
+//		while(it.hasNext()) {
+//			if(it.next() < 50)
+//				it.remove();
+//		}
+//		System.out.println(numbers1);
+		
+		LinkedList<String> names = new LinkedList<>();
+		names.push("tom");
+		names.push("bob");
+		names.push("pam");
+		names.push("tim");
+		
+//		Iterator<String> it2 = names.iterator();
+//		System.out.println(it2.next());
+//		System.out.println(it2.next());
+//		System.out.println(it2.hasNext());
+		
+//		names.add(2, "bar");
+//		
+//		for(String name : names)
+//			System.out.printf("%s ",name);
+//		System.out.println();
+//		
+//		System.out.println(names);
+//		System.out.println(names.pop());
+//		System.out.println(names.removeFirst());
+//		System.out.println(names.remove());
+//		System.out.println(names);
+		
+		
+		System.out.println(names);
+		ListIterator<String> it = names.listIterator();
+		System.out.println(it.next());
+		System.out.println(it.next());
+		it.add("job");
+		System.out.println(names);
 		
 	}
 
